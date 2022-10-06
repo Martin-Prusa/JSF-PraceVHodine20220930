@@ -12,24 +12,27 @@
 </h:head>
 
 <h:body>
-    <h1>Nový klient</h1>
-    <h:form>
-        <div class="form-group">
-            <h:outputLabel for="name">Jméno</h:outputLabel>
-            <h:inputText class="form-control" id="name" value="#{crm.newUser.name}"/>
-        </div>
-        <div class="form-group">
-            <h:outputLabel for="lastname">Příjmení</h:outputLabel>
-            <h:inputText class="form-control" id="lastname" value="#{crm.newUser.lastname}"/>
-        </div>
-        <div class="form-group">
-            <h:outputLabel for="age">Věk</h:outputLabel>
-            <h:inputText class="form-control" id="age" value="#{crm.newUser.age}"/>
-        </div>
-        <h:outputLabel for="longTime" value="Dlouhoudobý klient?"/>
-        <h:selectBooleanCheckbox id="longTime" value="#{crm.newUser.longTime}" />
-        <h:commandButton value="Přidat" class="btn btn-primary w-100" action="#{crm.submitNewUser()}" />
-    </h:form>
-    <h:link outcome="crm.xhtml" value="Zpět na hlavní stránku" />
+    <div class="container">
+
+        <h1>Nový klient</h1>
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel for="name">Jméno</h:outputLabel>
+                <h:inputText class="form-control" id="name" value="#{crm.newUser.name}"/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="lastname">Příjmení</h:outputLabel>
+                <h:inputText class="form-control" id="lastname" value="#{crm.newUser.lastname}"/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="age">Věk</h:outputLabel>
+                <h:inputText class="form-control" id="age" value="#{crm.newUser.age}"/>
+            </div>
+            <h:outputLabel for="longTime" value="Dlouhoudobý klient?"/>
+            <h:selectBooleanCheckbox id="longTime" value="#{crm.newUser.longTime}"/>
+            <h:commandButton value="Přidat" class="btn btn-primary w-100" action="#{crm.submitNewUser()}"/>
+        </h:form>
+        <h:link outcome="crm.xhtml" value="Zpět na hlavní stránku"/>
+    </div>
 </h:body>
 </html>

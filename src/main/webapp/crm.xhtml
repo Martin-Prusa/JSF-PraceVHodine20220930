@@ -34,8 +34,10 @@
                         <td>#{user.lastname}</td>
                         <td>#{user.age}</td>
                         <td>
-                            #{!!user.longTime}
-                            <!--<c:if test="#{true}">Ano</c:if>
+                            <h:outputText rendered="#{user.longTime}" value="Ano" />
+                            <h:outputText rendered="#{!user.longTime}" value="Ne" />
+                            <!--#{!!user.longTime}
+                            <c:if test="#{true}">Ano</c:if>
                             <c:if test="#{!user.longTime}">Ne</c:if>-->
                         </td>
                         <td>
